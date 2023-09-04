@@ -1,0 +1,17 @@
+{
+  "name": "studrada-email",
+  "version": "1.0.0",
+  "description": "react-email for studrada",
+  "main": "index.js",
+  "scripts": {
+    "dev": "email dev",
+    "export": "email export"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@react-email/button": "0.0.10",
+    "@react-email/html": "0.0.4",
+    "react-email": "1.9.4"
+  }
+}
