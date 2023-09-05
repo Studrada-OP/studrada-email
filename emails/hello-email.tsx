@@ -15,17 +15,13 @@ import {
   Text,
 } from "@react-email/components";
 
-const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : "";
-
 const HelloEmail = () => {
   return (
     <Html>
       <Head>
         <Font
           fontFamily="Jura"
-          fallbackFontFamily="Verdana"
+          fallbackFontFamily="Georgia"
           webFont={{
             url: "https://fonts.cdnfonts.com/s/8770/Jura-Regular.woff",
             format: "woff",
@@ -49,13 +45,13 @@ const HelloEmail = () => {
 
       <Body style={body}>
         <Container style={mainContainer}>
-          <div style={logoContainer}>
+          <Section style={logoContainer}>
             <Img
-              src={`${baseUrl}/static/studrada-logo.png`}
+              src="https://github.com/sspaceless/studrada-email/blob/main/static/studrada-logo.png?raw=true"
               width="160"
               alt="Лого студради НУ'ОП'"
             />
-          </div>
+          </Section>
 
           <Hr style={divider} />
 
@@ -63,14 +59,14 @@ const HelloEmail = () => {
             <Heading style={{ ...heading, textAlign: "center" }}>
               Вітаємо, шановні студенти!
             </Heading>
-            <div style={greetingsImageContainer}>
+            <Section style={greetingsImageContainer}>
               <Img
-                src={`${baseUrl}/static/happy-photo-1.jpg`}
+                src="https://github.com/sspaceless/studrada-email/blob/main/static/happy-photo-1.jpg?raw=true"
                 alt="Веселе фото з членами студради"
                 width="100%"
                 style={{ borderRadius: "16px" }}
               />
-            </div>
+            </Section>
 
             <Text style={{ ...greetingText, textAlign: "center" }}>
               Запрошуємо вас приєднатися до Студентської Ради Одеської
@@ -80,7 +76,12 @@ const HelloEmail = () => {
             </Text>
 
             <Section style={buttonContainer}>
-              <Button href="#" pX={13} pY={13} style={button}>
+              <Button
+                href="https://bio.link/studrada_nuop"
+                pX={13}
+                pY={13}
+                style={button}
+              >
                 Тиць!
               </Button>
             </Section>
@@ -91,9 +92,7 @@ const HelloEmail = () => {
   );
 };
 
-const body = {
-  backgroundColor: "#FFFFFF",
-};
+const body = {};
 
 const mainContainer = {
   maxWidth: "600px",
@@ -103,10 +102,8 @@ const mainContainer = {
 };
 
 const logoContainer = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  gap: "10px",
+  width: "min-content",
+  margin: "auto",
 };
 
 const divider = {
@@ -122,7 +119,6 @@ const heading = {
 
 const greetingsSection = {
   display: "flex",
-  justifyContent: "center",
   padding: "0 20px",
 };
 
@@ -138,8 +134,8 @@ const greetingText = {
 };
 
 const buttonContainer = {
-  display: "flex",
-  justifyContent: "center",
+  width: "min-content",
+  margin: "auto",
   marginTop: "24px",
 };
 
