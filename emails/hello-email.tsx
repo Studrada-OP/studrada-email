@@ -34,7 +34,7 @@ const HelloEmail = () => {
         />
       </Head>
 
-      <Preview>Вітаємо, шановні студенти!</Preview>
+      <Preview>Вітаємо, студенти!</Preview>
 
       <Body style={body}>
         <Container style={mainContainer}>
@@ -52,24 +52,44 @@ const HelloEmail = () => {
             </Section>
 
             <Section style={greetingsSection}>
-              <Heading style={heading}>Вітаємо, шановні студенти!</Heading>
-              <Section style={greetingsImageContainer}>
-                <Img
-                  src="https://github.com/sspaceless/studrada-email/blob/main/static/happy-photo-1.jpg?raw=true"
-                  alt="Веселе фото з членами студради 1"
-                  style={{ borderRadius: "16px", width: "100%" }}
-                />
-              </Section>
+              <Heading style={heading}>Вітаємо, студенти!</Heading>
+
+              <Text style={reasonText}>
+                Закликаємо підписатися на наш{" "}
+                <Link style={link} href="https://t.me/students_op">
+                  телеграм-канал
+                </Link>
+                , де ми інформуємо про найважливіше, що відбувається у
+                Політехніці. Це — головне джерело інформації після офіційного
+                веб-сайту, кафедр і деканатів. Не пропусти важливе!
+              </Text>
 
               <Section style={buttonContainer}>
-                <Button
-                  href="https://bio.link/studrada_nuop"
-                  pX={13}
-                  pY={13}
-                  style={button}
-                >
-                  Наші канали
-                </Button>
+                <Link href="https://t.me/students_op" style={button}>
+                  <Img
+                    src="https://github.com/sspaceless/studrada-email/blob/main/static/button.jpg?raw=true"
+                    alt="кнопка"
+                    style={{ width: "173px" }}
+                  ></Img>
+                </Link>
+              </Section>
+
+              <Text style={reasonText}>
+                У разі виникнення будь-яких проблем чи питань щодо навчання
+                радимо звертатися до нашого{" "}
+                <Link style={link} href="https://t.me/Studrada_OP_bot">
+                  бота підтримки
+                </Link>
+                , і волонтер зі Студради твого інституту допоможе корисною,
+                актуальною інформацією і порадами або поділиться контактами
+                працівника університету, який зможе вирішити питання.
+              </Text>
+              <Section style={greetingsImageContainer}>
+                <Img
+                  src="https://github.com/sspaceless/studrada-email/blob/main/static/happy-photo-4.jpg?raw=true"
+                  alt="Веселе фото з членами студради 4"
+                  style={{ borderRadius: "16px", width: "100%" }}
+                />
               </Section>
 
               <Section>
@@ -82,17 +102,17 @@ const HelloEmail = () => {
 
                 <Text style={reasonText}>
                   Студентська Рада складається на 100% зі студентів, ми будуємо
-                  платформу де думка кожного буде почута. Органи студентського
-                  самоврядування (ОСС) є невід’ємними частинами будь-якого
-                  університету, і від якості їх роботи залежить наскільки гарним
-                  буде перебування в університеті.
+                  платформу, де думка кожного буде почута. Органи студентського
+                  самоврядування (ОСС) є невід’ємною частиною будь-якого
+                  університету і від їх роботи залежить якість освітнього
+                  процесу в університеті.
                 </Text>
 
                 <Text style={reasonText}>
                   ОСС — це про небайдужих людей — від студентів і для студентів.
-                  Якщо ти побачив себе в цих рядках — вітаємо, ти чудовий
-                  кандидат для наших лав. Ми приймаємо нових членів з усіх
-                  інститутів впродовж всього року і завжди раді поповненню.
+                  Якщо це про тебе — вітаємо, ти чудовий кандидат у наші лави.
+                  Ми приймаємо нових членів з усіх інститутів впродовж всього
+                  року і завжди раді поповненню.
                 </Text>
               </Section>
 
@@ -151,8 +171,8 @@ const HelloEmail = () => {
                 <Column style={column}>
                   <Section>
                     <Img
-                      src="https://github.com/sspaceless/studrada-email/blob/main/static/happy-photo-4.jpg?raw=true"
-                      alt="Веселе фото з членами студради 4"
+                      src="https://github.com/sspaceless/studrada-email/blob/main/static/happy-photo-1.jpg?raw=true"
+                      alt="Веселе фото з членами студради 1"
                       style={{ borderRadius: "16px", width: "100%" }}
                     />
                   </Section>
@@ -163,8 +183,8 @@ const HelloEmail = () => {
                     <Text style={reasonTitle}>3. Нові знайомства</Text>
                     <Text style={reasonText}>
                       Ти познайомишся з крутими та цікавими людьми, які дуже
-                      ймовірно стануть твоїми друзями, поділять твої інтереси,
-                      та зможеш побудувати цінні зв'язки.
+                      ймовірно стануть твоїми друзями та розділять твої
+                      інтереси.
                     </Text>
                   </Section>
                 </Column>
@@ -211,31 +231,9 @@ const HelloEmail = () => {
                     долучитися і ми розпитаємо тебе про твої інтереси, навички
                     тощо, додамо до нашої комунікації і опишемо подальші дії. Не
                     хвилюйся щодо того, підходиш ти чи ні — в нас знайдеться
-                    робота для кожного студента. Ми намагаємося надати кожному
+                    робота для кожного студента. Ми намагаємося надати кожному,
                     хто стане членом Студради стільки можливостей для зросту,
                     скільки можемо.
-                  </Text>
-
-                  <Text style={reasonText}>
-                    Закликаємо підписатися на наш{" "}
-                    <Link style={link} href="https://t.me/students_op">
-                      телеграм-канал
-                    </Link>{" "}
-                    , де ми інформуємо про найважливіше, що відбувається у
-                    Політехніці. Це — головне джерело інформації після
-                    офіційного веб-сайту, кафедр і деканатів. Не пропусти
-                    важливе!
-                  </Text>
-
-                  <Text style={reasonText}>
-                    В разі виникнення будь-яких проблем чи питань щодо навчання
-                    радимо звертатися до нашого{" "}
-                    <Link style={link} href="https://t.me/Studrada_OP_bot">
-                      бота підтримки
-                    </Link>
-                    , і волонтер із Студради твого інституту допоможе корисною,
-                    актуальною інформацією і порадами або поділиться контактами
-                    працівника університету, який зможе вирішити питання.
                   </Text>
                 </Section>
 
@@ -257,9 +255,8 @@ const HelloEmail = () => {
                   </Text>
 
                   <Text style={reasonText}>
-                    2. Відвідувати щотижневі-двотижневі зустрічі. Для тих хто
-                    живе далеко ми надаємо можливість приймати участь
-                    дистанційно.
+                    2. Відвідувати щотижневі зустрічі. Для тих, хто живе далеко,
+                    ми надаємо можливість приймати участь дистанційно.
                   </Text>
 
                   <Text style={reasonText}>
@@ -277,14 +274,13 @@ const HelloEmail = () => {
               </Row>
 
               <Section style={buttonContainer}>
-                <Button
-                  href="https://bio.link/studrada_nuop"
-                  pX={13}
-                  pY={13}
-                  style={button}
-                >
-                  Наші канали
-                </Button>
+                <Link href="https://t.me/students_op" style={button}>
+                  <Img
+                    src="https://github.com/sspaceless/studrada-email/blob/main/static/button.jpg?raw=true"
+                    alt="кнопка"
+                    style={{ width: "173px" }}
+                  ></Img>
+                </Link>
               </Section>
             </Section>
 
@@ -313,6 +309,14 @@ const HelloEmail = () => {
 const body = {
   color: "#EFEFEF",
   backgroundColor: "#FFFFFF",
+};
+
+const blendScreen = {
+  mixBlendMode: "screen" as const,
+};
+
+const blendDifference = {
+  mixBlendMode: "difference" as const,
 };
 
 const mainContainer = {
@@ -356,6 +360,7 @@ const button = {
   color: "#000000",
   fontSize: "14px",
   textAlign: "center" as const,
+  whiteSpace: "pre" as const,
 };
 
 const reasonsSection = {
